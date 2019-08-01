@@ -1,0 +1,202 @@
+
+<html>
+
+<script src="js.js"></script>
+<title>ksrce cse Login</title>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <!-- jQuery library -->
+    <script src="jq.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script language="javascript">
+function func(form) {  
+if (form.id.value=="Ksrce")
+{ 
+if (form.pass.value=="ksrce")
+{              
+location="inde.html" 
+}
+else {
+alert("Invalid Password")
+}
+}
+else {  
+alert("Invalid UserID")
+}
+}
+    
+function up(){
+    alert("update soon!!!");
+    form.id.value.focus();
+}
+</script>
+</head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {border: 3px solid #f1f1f1;}
+        .box{
+            background: transparent;
+            box-sizing:border-box;
+            border: 1px solid  ;
+            width: 40%;
+            height: auto;
+            text-align: center;
+            position:fixed;
+            top: 40%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+
+            border-radius:10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: transparent;
+
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            background: transparent;
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
+            cursor: pointer;
+            width: 30%;
+        }
+
+        form input[type="button"]:hover {
+            color: white;
+            background-color: #4CAF50;
+        }
+        .d{
+        border: 1px solid red;
+        }
+
+        .d:hover {
+            color: white;
+            background-color: #4CAF50;
+        }
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+            color:red;
+        }
+    .psw a{
+        color: red;
+        text-decoration: none;
+    }
+@media screen and (max-width: 425px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+     .box{
+            background: transparent;
+            box-sizing:border-box;
+            border: 1px solid  ;
+            width: 90%;
+            height: auto;
+            text-align: center;
+            position:fixed;
+            top: 40%;
+            left: 50%;
+         transform:translate(-50%,-50%);
+            
+            border-radius:10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: transparent;
+        
+        }
+    button{
+        width: 40%;
+    }
+    
+}
+    @media screen and (min-width: 448px) {
+    button{
+        width: 35%;
+    }
+        
+    }
+
+    .box input[type="text"],.box input[type="password"],.box button[type="submit"]{
+        border-radius: 10px;
+        width: 90%;
+    }
+    .box input[type="submit"],.box button[type="button"]{
+          color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        background: transparent;
+        color: #4CAF50;
+        border: 1px solid #4CAF50;
+        cursor: pointer;
+        width: 30%;
+                border-radius: 10px;
+
+
+    }
+        .btn{
+            background-color: transparent;
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
+        }
+    </style> 
+<body>
+<div class="s">
+    <form class="box">
+<h1></h1><br>
+        <div class="imgcontainer">
+            <img src="log.jpg" alt="Avatar" class="avatar">
+        </div>
+        <label for="uname"><b>Username</b></label>
+<input name="id" type="text"  placeholder="Enter Username" ><br>
+        <label for="uname"><b>Password</b></label>
+<input name="pass" type="password" placeholder="Enter Password"  ><br><br><br><br>
+<div class="sa">
+<input class="btn btn-succes"type="button" value="Login" class="d" onClick="func(this.form)">
+    <a href="#"><input class="btn btn-success" type="button" value="Sign up"  class="d" onclick="up()"></a><br><br>
+     <div class="container">
+         <span class="psw" onclick="up()">Forgot <a href="#">password?</a></span></div><br><br>
+</div>
+</form>
+</div>
+</body>
+</html>

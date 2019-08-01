@@ -1,0 +1,424 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="css.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fruits & Juice Cafe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        contact
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Facebook</a>
+                        <a class="dropdown-item" href="#">Instagram</a>
+
+                        <a class="dropdown-item" href="#">Twitter</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Rate us <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Creators</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" id="search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="searchbu" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="slide">
+            <p id="one">apple :<span id="ap"></span></p>
+            <p id="two">grapes :<span id="gr"></span></p>
+            <p id="three">pomegranate :<span id="po"></span></p>
+            <p id="four">lemon :<span id="le"></span></p>
+            <p id="five">orange :<span id="or"></span></p>
+            <p id="six">mango<span id="ma"></span></p>
+            <p id="seven">musk melon :<span id="mu"></span></p>
+            <p id="eight">sapota :<span id="sap"></span></p>
+            <p id="nine">apple juice:<span id="apj"></span></p>
+            <p id="ten">grapes juice :<span id="grj"></span></p>
+            <p id="ele">pomegranate juice :<span id="poj"></span></p>
+            <p id="twl">lemon juice :<span id="lej"></span></p>
+            <p id="thi">orange juice :<span id="orj"></span></p>
+            <p id="fou">mango juice :<span id="maj"></span></p>
+            <p id="fiv">musk melon juice :<span id="muj"></span></p>
+            <p id="si">sapota juice :<span id="sapj"></span></p><hr>
+            <p id="total">Total :<span id="tot"></span></p>
+            <!-- <p >total      :<span id="to"></span></p>--->
+            <div class="orr">
+            <input class="btn btn-primary" type="button" value="Order" onclick="order();">
+            </div>
+        </div>
+    </div>
+    <div class="cardpro" id="cardpro">
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="apple" style="width: 18rem;">
+            <img src="asstes/img/apple-food-fruit-39803.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Apple</h5>
+                <p class="card-text">1 Kg - Rs.100/-</p>
+                <div class="row">quantity:
+                    <input type="number" min="0" value="1" id="applei">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="applea">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="grapes" style="width: 18rem;">
+            <img src="grapes.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Grapes</h5>
+                <p class="card-text">1 Kg - Rs.70/-</p>
+                <div class="row">quantity:
+                    <input id="grapesi" type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="grapesa">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="pomegranate" style="width: 18rem;">
+            <img src="pomegranate1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pomegranate</h5>
+                <p class="card-text">1 Kg - Rs.120/-</p>
+                <div class="row">quantity:
+                    <input id="pomegranatei" type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="Pomegranatea">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="lemon" style="width: 18rem;">
+            <img src="lemoni1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lemon</h5>
+                <p class="card-text">1 Kg - Rs.55/-</p>
+                <div class="row">quantity:
+                    <input id="lemoni"type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="lemona">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="orange" style="width: 18rem;">
+            <img src="orange1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Orange</h5>
+                <p class="card-text">1 Kg - Rs.90/-</p>
+                <div class="row">quantity:
+                    <input id="orangei"type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="orangea">Add</a>
+                </div>
+            </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="mango" style="width: 18rem;">
+            <img src="ma12.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mango</h5>
+                <p class="card-text">1 Kg - Rs.70/-</p>
+                <div class="row">quantity:
+                    <input id="mangoi"type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="mangoa">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="mus" style="width: 18rem;">
+            <img src="musk1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Musk Melon</h5>
+                <p class="card-text">1 Kg - Rs.65/-</p>
+                <div class="row">quantity:
+                    <input id="musi"type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="muska">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="sapota" style="width: 18rem;">
+            <img src="sasa12.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mud apple(sapota)</h5>
+                <p class="card-text">1 Kg - Rs.25/-</p>
+                <div class="row">quantity:
+                    <input id="sapotai" type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="sapota">Add</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="apple" style="width: 18rem;">
+            <img src="5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Apple Juice</h5>
+                <p class="card-text">1 - Rs.30/-</p>
+                <div class="row">quantity:
+                    <input id="appleji" type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="appleja">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="grapes" style="width: 18rem;">
+            <img src="grapesjui1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Grapes juice</h5>
+                <p class="card-text">1 - Rs.25/-</p>
+                <div class="row">quantity:
+                    <input id="grapesji" type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="grapesja">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="pomegranate" style="width: 18rem;">
+            <img src="pomojui1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pomegranate juice</h5>
+                <p class="card-text">1 - Rs.30/-</p>
+                <div class="row">quantity:
+                    <input id="pomegranateji"type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="pomegranateja">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="lemon" style="width: 18rem;">
+            <img src="lemon-juice.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lemon Juice</h5>
+                <p class="card-text">1 - Rs.10/-</p>
+                <div class="row">quantity:
+                    <input id="lemonji"type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="lemonja">Add</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="orange" style="width: 18rem;">
+            <img src="saladfusion-orange-juice.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Orange Juice</h5>
+                <p class="card-text">1 - Rs.20/-</p>
+                <div class="row">quantity:
+                    <input id="orangeji"type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="orangeja">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="mango" style="width: 18rem;">
+            <img src="mango1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mango Juice</h5>
+                <p class="card-text">1 - Rs.25/-</p>
+                <div class="row">quantity:
+                    <input id="mangoji" type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="mangoja">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="mus" style="width: 18rem;">
+            <img src="muskjui1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Musk Melon Juice</h5>
+                <p class="card-text">1 - Rs.15/-</p>
+                <div class="row">quantity:
+                    <input id="musji" type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="muskja">Add</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="sapota" style="width: 18rem;">
+            <img src="sappotta1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mud apple(sapota) Juice</h5>
+                <p class="card-text">1 - Rs.20/-</p>
+                <div class="row">quantity:
+                    <input  id="sapotaji"type="number" min="0" value="1">
+                    <a href="#" class="btn btn-primary" onclick="openNav()" id="sapotaja">Add</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <h6>Created By : <a href="https://santhoshkumarvgds.github.io/">santhosh kumar</a> & <a href="https://sureshmuruga.github.io/website">sureshkumar</a>&
+                <a href="https://naveenprabu.github.io/web">naveenprabu</a>&
+                <a href="https://mvignesh07.github.io/website">vignesh</a>&
+                <a href="https://yukesha.github.io/profile/">yukesh</a>&
+                <a href="https://sanjeevinath.github.io/web">sanjeevinath</a></h6>
+        </div>
+    </footer>
+</body>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("cardpro").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("cardpro").style.marginLeft = "0";
+    }
+    $("#one,#two,#three,#four,#five,#six,#seven,#eight,#nine,#ten,#ele,#twl,#thi,#fou,#fiv,#si").hide();
+    ap = 0;
+    gr = 0;
+    po=0;le=0;tot=0;or=0;ma=0;mu=0;spo=0;apj=0;grj=0;poj=0;lej=0;orj=0;maj=0;muj=0;spj=0;
+    $("#apple").click(function() {
+        ap = $("#applei").val() * 100;
+        $("#one").show();   total();
+        document.getElementById("ap").innerHTML = ap;
+    }); 
+    $("#appleja").click(function() {
+        apj = $("#appleji").val() * 30;
+        $("#nine").show();   total();
+        document.getElementById("apj").innerHTML = apj;
+    });
+    $("#grapes").click(function() {
+        gr = $("#grapesi").val() * 70;
+        $("#two").show();   total();
+        document.getElementById("gr").innerHTML = gr;
+    });$("#grapesja").click(function() {
+        grj = $("#grapesji").val() * 25;
+        $("#ten").show();   total();
+        document.getElementById("grj").innerHTML = grj;
+    });
+    $("#pomegranate").click(function() {
+        po = $("#pomegranatei").val() * 120;
+        $("#three").show();   total();
+        document.getElementById("po").innerHTML = po;
+    });
+    $("#pomegranateja").click(function() {
+        poj = $("#pomegranateji").val() * 30;
+        $("#ele").show();   total();
+        document.getElementById("poj").innerHTML = poj;
+    });
+    $("#lemon").click(function() {
+        le = $("#lemoni").val() * 55;
+        $("#four").show();   total();
+        document.getElementById("le").innerHTML = le;
+    });$("#lemonja").click(function() {
+        lej = $("#lemonji").val() * 10;
+        $("#twl").show();   total();
+        document.getElementById("lej").innerHTML = lej;
+    });
+    $("#orange").click(function() {
+        or = $("#orangei").val() * 90;
+        $("#five").show();   total();
+        document.getElementById("or").innerHTML = or;
+    });$("#orangeja").click(function() {
+        orj = $("#orangeji").val() * 20;
+        $("#thi").show();   total();
+        document.getElementById("orj").innerHTML = orj;
+    });
+    $("#mango").click(function() {
+        ma = $("#mangoi").val() * 70;
+        $("#six").show();   total();
+        document.getElementById("ma").innerHTML = ma;
+    });$("#mangoja").click(function() {
+        maj = $("#mangoji").val() * 25;
+        $("#fou").show();   total();
+        document.getElementById("maj").innerHTML = maj;
+    });
+    $("#mus").click(function() {
+        mu = $("#musi").val() * 65;
+        $("#seven").show();   total();
+        document.getElementById("mu").innerHTML = mu;
+    });$("#musja").click(function() {
+        muj = $("#musji").val() * 15;
+        $("#fiv").show();   total();
+        document.getElementById("musj").innerHTML = muj;
+    });
+    $("#sapota").click(function() {
+        spo = $("#sapotai").val() * 25;
+        $("#eight").show();   total();
+        document.getElementById("sap").innerHTML = spo;
+    });
+    $("#sapotaja").click(function() {
+        spj = $("#sapotaji").val() * 20;
+        $("#si").show();   total();
+        document.getElementById("sapj").innerHTML = spj;
+    });
+    
+    function total(){
+        $("#total").show();
+        tot=ap+apj+gr+grj+po+poj+le+lej+or+orj+ma+maj+mu+muj+spo+spj;
+        document.getElementById("tot").innerHTML = tot;
+    }
+    //   document.getElementById("to").innerHTML=ap+gr;
+    $(document).ready(function() {
+        $("#searchbu").click(function() {
+            var a = $("#search").val();
+            if (a == "apple") {
+                $("#grapes,#Pomegranate,#lemon,#orange,#mango,#mus,#sapota").css("display", "none");
+                $("#" + a).css("display", "block");
+            }
+            
+            else if( a=="grapes"){
+                $("#apple,#Pomegranate,#lemon,#orange,#mango,#mus,#sapota").css("display", "none");
+                $("#" + a).css("display", "block");
+            }
+            else if( a=="Pomegranate"){
+                $("#apple,#grapes,#lemon,#orange,#mango,#mus,#sapota").css("display", "none");
+                $("#" + a).css("display", "block");
+            }
+            else if( a=="lemon"){
+                $("#apple,#grapes,#Pomegranate,#orange,#mango,#mus,#sapota").css("display", "none");
+                $("#" + a).css("display", "block");
+            }
+            else if( a=="orange"){
+                $("#apple,#grapes,#Pomegranate,#lemon,#mango,#mus,#sapota").css("display", "none");
+                $("#" + a).css("display", "block");
+            }
+            else if( a=="mango"){
+                $("#apple,#grapes,#Pomegranate,#lemon,#orange,#mus,#sapota").css("display", "none");
+                $("#" + a).css("display", "block");
+            }
+            else if( a=="mus"){
+                $("#apple,#grapes,#Pomegranate,#lemon,#orange,#mango,#sapota").css("display", "none");
+                $("#" + a).css("display", "block");
+            }
+            else{
+                $("#apple,#grapes,#Pomegranate,#lemon,#orange,#mango,#mus").css("display", "none");
+                $("#" + a).css("display", "block");
+            }
+        
+    });
+    });
+    function order() {
+        alert("Your order will be delivery soon");
+        alert("Thanks for placing order");
+    }
+</script>
+
+</html>
